@@ -85,12 +85,15 @@
       padding: 40px 28px;
     }
     .splash-mark {
-      width: 90px; height: 100px;
+      width: 140px; height: 160px;
       margin-bottom: 20px;
-      position: relative;
       display: flex; align-items: center; justify-content: center;
     }
-    .shield-svg { width: 90px; height: 100px; filter: drop-shadow(0 8px 24px rgba(201,168,76,0.5)); }
+    .shield-img {
+      width: 140px; height: 160px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 32px rgba(201,168,76,0.6)) brightness(1.05);
+    }
     .splash-word { font-size: 36px; font-weight: 900; letter-spacing: 6px; color: #fff; margin-bottom: 6px; }
     .splash-word span { color: #C9A84C; }
     .splash-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 56px; text-align: center; }
@@ -306,24 +309,7 @@
       <div class="status-bar dark"><span style="font-size:15px;font-weight:700;">9:41</span><span>●●● WiFi 100%</span></div>
       <div class="splash-body">
         <div class="splash-mark">
-          <svg class="shield-svg" viewBox="0 0 90 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Shield shape -->
-            <path d="M45 2 L82 16 L82 52 Q82 78 45 98 Q8 78 8 52 L8 16 Z" fill="url(#shieldGrad)" stroke="#C9A84C" stroke-width="2"/>
-            <!-- Inner border -->
-            <path d="M45 10 L74 21 L74 52 Q74 72 45 88 Q16 72 16 52 L16 21 Z" fill="none" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
-            <!-- Lion head circle -->
-            <circle cx="45" cy="48" r="20" fill="rgba(0,0,0,0.3)" stroke="#C9A84C" stroke-width="1.5"/>
-            <!-- Stylized V for Valor -->
-            <text x="45" y="56" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#C9A84C">V</text>
-            <!-- Crown top -->
-            <path d="M33 20 L37 14 L41 20 L45 13 L49 20 L53 14 L57 20" stroke="#C9A84C" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-            <defs>
-              <linearGradient id="shieldGrad" x1="8" y1="2" x2="82" y2="98" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#1a1a1a"/>
-                <stop offset="100%" stop-color="#2a2208"/>
-              </linearGradient>
-            </defs>
-          </svg>
+          <img src="shield.jpg" class="shield-img" alt="ValorAI Shield">
         </div>
         <div class="splash-word">VALOR<span>AI</span></div>
         <div class="splash-tag">Verify Evidence · Establish Truth · Restore Confidence</div>
